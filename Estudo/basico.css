@@ -1,0 +1,16 @@
+h1{
+    color:aqua;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 54px;
+}
+
+h2{
+    color: blueviolet;
+    font-size: 100px;
+    font-style: italic;
+    text-align: center;
+}
+
+p1{
+    font-size: 10px;
+}
