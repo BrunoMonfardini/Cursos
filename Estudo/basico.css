@@ -9,6 +9,8 @@ h2{
     font-size: 100px;
     font-style: italic;
     text-align: center;
+    margin: 50px;
+    background-color: rgb(255, 255, 255);
 }
 
 p1{
