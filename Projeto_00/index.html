@@ -1,56 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <title>TechStore</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechStore</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
 <header>
-  <h1>TechStore</h1>
-  <nav>
-    <a href="#">Produtos</a>
-    <a href="#">Suporte</a>
-    <a href="#">Contato</a>
-  </nav>
+
+<h1>TechStore</h1>
+
+<nav>
+<a href="#">Produtos</a>
+<a href="#">Suporte</a>
+<a href="#">Contato</a>
+</nav>
+
+<div class="header-actions">
+<button onclick="toggleDarkMode()">🌙</button>
+<div class="cart">
+🛒 <span id="cart-count">0</span>
+</div>
+</div>
+
 </header>
 
+
 <section class="hero">
-  <h2>Novo SmartPhone X</h2>
-  <p>Velocidade absurda. Design incrível.</p>
-  <button onclick="comprar()">Comprar</button>
+
+<h2>Novo SmartPhone X</h2>
+<p>Performance absurda. Design minimalista.</p>
+
+<button onclick="abrirProduto('SmartPhone X','R$ 4.999')">
+Comprar
+</button>
+
 </section>
+
 
 <section class="products">
 
-  <div class="product">
-    <img src="https://via.placeholder.com/200">
-    <h3>SmartPhone X</h3>
-    <p>R$ 4.999</p>
-    <button onclick="addCarrinho('SmartPhone X')">Adicionar</button>
-  </div>
+<div class="product">
+<img src="https://via.placeholder.com/200">
+<h3>SmartPhone X</h3>
+<p>R$ 4.999</p>
+<button onclick="abrirProduto('SmartPhone X','R$ 4.999')">Ver</button>
+</div>
 
-  <div class="product">
-    <img src="https://via.placeholder.com/200">
-    <h3>Tablet Pro</h3>
-    <p>R$ 3.499</p>
-    <button onclick="addCarrinho('Tablet Pro')">Adicionar</button>
-  </div>
+<div class="product">
+<img src="https://via.placeholder.com/200">
+<h3>Tablet Pro</h3>
+<p>R$ 3.499</p>
+<button onclick="abrirProduto('Tablet Pro','R$ 3.499')">Ver</button>
+</div>
 
-  <div class="product">
-    <img src="https://via.placeholder.com/200">
-    <h3>SmartWatch</h3>
-    <p>R$ 1.999</p>
-    <button onclick="addCarrinho('SmartWatch')">Adicionar</button>
-  </div>
+<div class="product">
+<img src="https://via.placeholder.com/200">
+<h3>SmartWatch</h3>
+<p>R$ 1.999</p>
+<button onclick="abrirProduto('SmartWatch','R$ 1.999')">Ver</button>
+</div>
 
 </section>
 
+
+<!-- MODAL PRODUTO -->
+
+<div id="modal" class="modal">
+
+<div class="modal-content">
+
+<span class="close" onclick="fecharModal()">×</span>
+
+<h2 id="modal-title"></h2>
+<p id="modal-price"></p>
+
+<button onclick="addCarrinho()">Adicionar ao carrinho</button>
+
+</div>
+
+</div>
+
+
 <footer>
-  <p>© 2026 TechStore</p>
+<p>© 2026 TechStore</p>
 </footer>
+
 
 <script src="script.js"></script>
 
